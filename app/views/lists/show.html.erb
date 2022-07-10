@@ -1,4 +1,16 @@
 <div class="container m-5">
   <h1><%= @list.name %></h1>
-  
+
+  <% @bookmarks.each do |bookmark| %>
+    <div class="col-4 mb-3">
+      <p>Title: <%= bookmark.movie.title %></p>
+      <p>Comment: <%= bookmark.comment %></p>
+    </div>
+  <% end %>
+
+</div>
+
+<div class="container m-5">
+   <%= link_to "Add a new bookmark",  new_list_bookmark_path(@list) %>
+   <%= link_to "Back",  lists_path %>
 </div>

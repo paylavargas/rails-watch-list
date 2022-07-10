@@ -1,12 +1,25 @@
-.navbar-lewagon {
+.navbar-listo {
   justify-content: space-between;
   background: white;
+
+  #logo {
+    font-size: 32px;
+    color: rgb(88, 221, 212);
+  }
+
+  #brand-name {
+    font-family: $brand-font;
+    font-size: 30px;
+    color: darkred;
+    letter-spacing: 2px;
+    margin-left: 4px;
+  }
 }
 
-.navbar-lewagon .navbar-collapse {
+.navbar-listo .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
+.navbar-listo .navbar-brand img {
   width: 40px;
 }
