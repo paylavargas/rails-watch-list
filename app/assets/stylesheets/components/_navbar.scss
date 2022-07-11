@@ -1,7 +1,14 @@
 .navbar-listo {
   justify-content: space-between;
-  background: white;
+  background-color: rgba(0,0,0,0.3);
 
+  #brand-name {
+    font-family: $brand-font;
+    font-size: 30px;
+    color: rgb(240, 232, 232);
+    letter-spacing: 4px;
+    margin-left: 4px;
+  }
   #logo-blue {
     font-size: 32px;
     color: rgb(88, 221, 212);
@@ -14,18 +21,19 @@
     font-size: 32px;
     color: rgb(221, 217, 88);
   }
-
-  #brand-name {
-    font-family: $brand-font;
-    font-size: 30px;
-    color: darkred;
-    letter-spacing: 2px;
-    margin-left: 4px;
-  }
 }
 
 .navbar-listo .navbar-collapse {
   flex-grow: 0;
+
+  .nav-link {
+    color: rgb(160, 161, 161);
+    margin-right: 4px;
+
+    &:hover {
+      color: rgb(247, 247, 247);
+    }
+  }
 }
 
 .navbar-listo .navbar-brand img {

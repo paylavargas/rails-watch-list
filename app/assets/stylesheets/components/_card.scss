@@ -2,16 +2,24 @@
 .card-new-trip {
   overflow: hidden;
   height: 100%;
-  border: 2px dotted black;
+  border: 2px dotted rgb(240, 232, 232);
   border-radius: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  &:hover {
+    background-color:rgb(160, 161, 161);
+    transition: 0.2s ease-out;
+    transform: translateY(-8px);
+  }
+
   h2 {
-    // font-size: 16px;
     text-align: center;
+    color: rgb(240, 232, 232);
   }
 }
+
 
 .card-pick {
   /*fixed*/
@@ -22,6 +30,14 @@
   border-radius: 4px;
   background-color: white;
   box-shadow: 0 0px 16px rgba(0, 0, 0, 0.3);
+
+  &:hover {
+    /*customizable*/
+    transition: 0.2s ease-out;
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    color:rgb(160, 161, 161);
+  }
 }
 .card-pick img {
   /*fixed*/
@@ -41,16 +57,10 @@
   /*customizable*/
   margin: 0;
 }
-.card-pick:hover {
-  /*customizable*/
-  transition: 0.2s ease-out;
-  transform: translateY(-8px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
-
 
 .card-text {
-  text-decoration: none !important;
+  text-decoration: none;
   color: black;
   font-size: 16px;
+  text-align: center;
 }
