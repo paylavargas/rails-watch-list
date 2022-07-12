@@ -8,6 +8,9 @@
               <div class="card-trip-info">
                 <p>Title: <%= bookmark.movie.title %></p>
                 <p>Comment: <%= bookmark.comment %></p>
+                <%= link_to lists_path(bookmark), method: :delete do %>
+                  <i class="fas fa-trash"></i>
+                <% end %>
               </div>
             </div>
         </div>

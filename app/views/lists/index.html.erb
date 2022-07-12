@@ -23,6 +23,9 @@
               <img src="image.jpg" alt="">
               <div class="card-pick-info">
                 <h2><%= list.name %></h2>
+                <%= link_to lists_path(list), method: :delete do %>
+                  <i class="fas fa-trash"></i>
+                <% end %>
               </div>
             </div>
           <% end %>
