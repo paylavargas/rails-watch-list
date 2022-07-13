@@ -1,5 +1,40 @@
 <!--banner-->
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://bloody-disgusting.com/wp-content/uploads/2022/02/stranger-things-5.png);">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://dnm.nflximg.net/api/v6/BvVbc2Wxr2w6QuoANoSpJKEIWjQ/AAAAQSUH3q4uRHtodt3yr1KqS-DzDwLrUOlIyXgIVZn9x_dtWrMxknXkX495yIuCAqlU5NgqnQjzer79IH-voyaH532nf9PU219u5DzkZc5O71PBKnaiB1Hamdk7x0HDe1srcGCFfC5lDPcp97GlNxfczoSX.jpg?r=81b);">
+  <!--navbar-->
+    <div class="navbar navbar-expand-sm navbar-light navbar-listo">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <i id="logo-blue" class="fas fa-th-list"></i>
+          <i id="logo-red" class="fas fa-th-list"></i>
+          <i id="logo-yellow" class="fas fa-th-list"></i>
+          <span id="brand-name">listo</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto">
+              <li class="nav-item active">
+                <%= link_to "My List", lists_path, class: "nav-link" %>
+              </li>
+              <li class="nav-item">
+                <%= link_to "New List", new_list_path, class: "nav-link" %>
+              </li>
+              <li class="nav-item dropdown">
+                <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://kitt.lewagon.com/placeholder/users/ssaunier"/>
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">My Lists</a>
+                  <a class="dropdown-item" href="#">New List</a>
+                  <a class="dropdown-item" data-turbo-method="delete" href="#">Log out</a>
+                </div>
+              </li>
+              <!--li class="nav-item"-->
+              <!--/li-->
+          </ul>
+        </div>
+      </div>
+    </div>
   <div class="container text-center font-weight-bold">
     <h1>List films you’ve watched.<br>Tell your friends what’s good.</h1>
   </div>
@@ -21,10 +56,9 @@
           <%= link_to list_path(list), class: "card-text" do %>
             <div class="card-pick">
             <% if list.photo.attached? %>
-              <% cl_image_tag list.photo.key %>
+              <%= cl_image_tag list.photo.key, width: 600, height: 160 %>
               <% else %>
-              <%= image_tag "/assets/images/cinema1.jpeg", style: ' width:100%;
-                height:100%;' %>
+              <%= cl_image_tag "q2zwdzid3a3vo6m5786rtisfjxbb", width: 600, height: 160 %>
             <% end %>
               <div class="card-pick-info">
                 <h2><%= list.name %></h2>

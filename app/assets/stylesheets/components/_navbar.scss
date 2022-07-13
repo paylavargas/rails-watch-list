@@ -1,6 +1,9 @@
 .navbar-listo {
+  display: flex;
   justify-content: space-between;
   background-color: rgba(0,0,0,0.3);
+  margin-left: 24px;
+  margin-right: 24px;
 
   #brand-name {
     font-family: $brand-font;
