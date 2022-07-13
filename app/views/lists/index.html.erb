@@ -20,12 +20,15 @@
         <div class="col-6 mb-3">
           <%= link_to list_path(list), class: "card-text" do %>
             <div class="card-pick">
-              <img src="image.jpg" alt="">
+            <% if list.photo.attached? %>
+              <% cl_image_tag list.photo.key %>
+              <% else %>
+              <%= image_tag "/assets/images/cinema1.jpeg", style: ' width:100%;
+                height:100%;' %>
+            <% end %>
               <div class="card-pick-info">
                 <h2><%= list.name %></h2>
-                <%= link_to lists_path(list), method: :delete do %>
-                  <i class="fas fa-trash"></i>
-                <% end %>
+                <%= link_to "Delete", list_path(list), data: {confirm: 'Are you sure?'}, method: :delete %>
               </div>
             </div>
           <% end %>
