@@ -2,10 +2,18 @@
   margin-bottom: 16px;
   word-spacing: 4px;
 
-  .button-text p {
-    line-height: 1.5;
-    font-size: 16px;
-    font-weight: 700;
-    color: white;
+  a {
+    text-decoration: none;
+  }
+}
+
+.button-text p {
+  line-height: 1.5;
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+
+  &:hover {
+    color: #A0A1A1;
   }
 }
