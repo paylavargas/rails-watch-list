@@ -8,7 +8,16 @@ import Turbolinks from "turbolinks";
 import * as ActiveStorage from "@rails/activestorage";
 import "channels";
 import "bootstrap";
+import Typed from 'typed.js';
 
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+var typed6 = new Typed('.typed', {
+  strings: [
+    "List films you’ve watched.\nTell your friends what’s good."],
+  typeSpeed: 50,
+  backSpeed: 10,
+  loop: true,
+});
