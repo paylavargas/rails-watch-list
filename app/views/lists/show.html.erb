@@ -1,19 +1,58 @@
+<!--navbar-->
+    <div class="navbar navbar-expand-sm navbar-light navbar-listo">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <i id="logo-blue" class="fas fa-th-list"></i>
+          <i id="logo-red" class="fas fa-th-list"></i>
+          <i id="logo-yellow" class="fas fa-th-list"></i>
+          <span id="brand-name">listo</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto">
+              <li class="nav-item active">
+                <%= link_to "My List", lists_path, class: "nav-link" %>
+              </li>
+              <li class="nav-item">
+                <%= link_to "New List", new_list_path, class: "nav-link" %>
+              </li>
+              <li class="nav-item dropdown">
+                <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://kitt.lewagon.com/placeholder/users/ssaunier"/>
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">My Lists</a>
+                  <a class="dropdown-item" href="#">New List</a>
+                  <a class="dropdown-item" data-turbo-method="delete" href="#">Log out</a>
+                </div>
+              </li>
+              <!--li class="nav-item"-->
+              <!--/li-->
+          </ul>
+        </div>
+      </div>
+    </div>
+
 <div class="container m-5">
   <h1><%= @list.name %></h1>
   <% if @list.photo.attached? %>
-    <%= cl_image_tag @list.photo.key %>
+    <%= cl_image_tag @list.photo.key, height: 650, crop: "scale" %>
   <% end %>
   <div class="row">
     <%@bookmarks.each do |bookmark| %>
-        <div class="col-sm mb-3">
+        <div class="col mb-3">
             <div class="card-trip">
               <img src="<%= bookmark.movie.poster_url %>" />
               <div class="card-trip-info">
-                <p>Title: <%= bookmark.movie.title %></p>
-                <p>Comment: <%= bookmark.comment %></p>
-                <%= link_to lists_path(bookmark), method: :delete do %>
-                  <i class="fas fa-trash"></i>
-                <% end %>
+                <p><strong> <%= bookmark.movie.title %></strong> | <%= bookmark.movie.rating %> ⭐</p>
+                <p>Overview: <%= bookmark.movie.overview %></p>
+                <div class="card-trip-footer">
+                  <i class="fas fa-quote-left"><%= bookmark.comment %></i>
+                  <%= link_to bookmark_path(bookmark), method: :delete do %>
+                    <i class="fas fa-trash"></i>
+                  <% end %>
+                </div>
               </div>
             </div>
         </div>

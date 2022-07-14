@@ -1,25 +1,3 @@
-// /*card pick-index*/
-// .card-new-pick {
-//   overflow: hidden;
-//   height: 100%;
-//   border: 2px dotted rgb(240, 232, 232);
-//   border-radius: 8px;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-
-//   &:hover {
-//     background-color:rgb(160, 161, 161);
-//     transition: 0.2s ease-out;
-//     transform: translateY(-8px);
-//   }
-
-//   h2 {
-//     text-align: center;
-//     color: rgb(240, 232, 232);
-//   }
-// }
-
 .card-pick {
   /*fixed*/
   display: flex;
@@ -81,6 +59,7 @@
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   height: 480px;
+  margin-top: 24px;
 
   &:hover {
     /*customizable*/
@@ -100,18 +79,31 @@
 
 .card-trip .card-trip-info {
   padding: 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  font-size: 16px;
   position: relative;
+  margin-top: 20px;
+
+  .movie-title {
+    font-size: 16px;
+  }
   p {
     color: black;
   }
 }
 
 .card-trip-info .card-trip-user {
-  position: absolute;
   right: 16px;
   top: -20px;
   width: 40px;
+}
+
+.card-trip-footer {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0;
+
+  i {
+    color: black;
+    font-size: 24px;
+  }
 }
