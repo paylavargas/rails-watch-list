@@ -53,9 +53,7 @@
 .card-text {
   text-decoration: none;
   color: black;
-  font-size: 16px;
   text-align: center;
-
 }
 
 .card-pick-info {
@@ -71,6 +69,8 @@
   h2 {
     /*customizable*/
     margin: 0;
+    font-size: 18px;
+    font-weight: 600;
   }
 }
 

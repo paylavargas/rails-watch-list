@@ -46,13 +46,13 @@
   <div class="button-add">
   <%= link_to new_list_path, class: "button-text" do %>
     <div class="btn btn-primary">
-      <p>+ Add a list</p>
+      <p><%= icon("far fa-plus-square", 'font-awesome') %>  List</p>
     </div>
   </div>
   <% end %>
   <div class="row">
     <% @lists.each do |list| %>
-        <div class="col-3 mb-3">
+        <div class="col mb-3">
           <%= link_to list_path(list), class: "card-text" do %>
             <div class="card-pick">
             <% if list.photo.attached? %>

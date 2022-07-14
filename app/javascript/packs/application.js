@@ -18,6 +18,6 @@ var typed6 = new Typed('.typed', {
   strings: [
     "List films you’ve watched.\nTell your friends what’s good."],
   typeSpeed: 50,
-  backSpeed: 10,
+  backSpeed: 5,
   loop: true,
 });
